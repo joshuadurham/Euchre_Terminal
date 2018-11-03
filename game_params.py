@@ -1,0 +1,35 @@
+from enum import Enum
+
+NUM_CARD_VALUES = 6
+NUM_CARD_SUITS = 4
+CARDS_TO_WIN_ROUND = 3
+CARDS_TO_SWEEP = 5
+POINTS_TO_WIN = 10
+POINTS_FOR_WIN = 1
+POINTS_FOR_SWEEP = 2
+POINTS_FOR_EUCH_WIN = 2
+POINTS_FOR_EUCH_SWEEP = 4
+POINTS_FOR_ALONE_WIN = 1
+POINTS_FOR_ALONE_SWEEP = 4
+
+class Suit(Enum):
+    CLUB = 1
+    DIAMOND = 2
+    HEART = 3
+    SPADE = 4
+
+class CardValue(Enum):
+    NINE = 1
+    TEN = 2
+    JACK = 3
+    QUEEN = 4
+    KING = 5
+    ACE = 6
+
+class RoundState(Enum):
+    SHUFFLING = 1
+    TRUMP_SELECTION = 2
+    TRUMP_FORCE_SELECTION = 3
+    ALONE_SELECTION = 5
+    HAND_PLAYING = 5
+    FINISH_ROUND = 6
